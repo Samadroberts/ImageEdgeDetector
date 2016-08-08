@@ -27,7 +27,7 @@ public class ImageUtils {
 	private static final double DEFAULT_THETA = -200;
 
 	private static final double THETA_THRESHOLD = 360;
-	private static final double DELTA_THRESHOLD = 50;
+	private static final double DELTA_THRESHOLD = 25;
 
 
 	//calculates Luminosity of a pixel
