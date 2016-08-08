@@ -21,7 +21,7 @@ public class ImageUtils {
 	/**
 	 * DEFAULT DELTA is just a value > 0 so a division by 0 never occurs.
 	 */
-	private static final double DEFAULT_DELTA = 1.0;
+	private static final double DEFAULT_DELTA = 1;
 	private static final double DEFAULT_THETA = -200;
 
 	private static final double THETA_THRESHOLD = 360;
@@ -157,7 +157,7 @@ public class ImageUtils {
 				//if theta <360 and >-360 degress and the magitude of the gradient is >=20 than an edge has been detected
 				if((Math.abs(theta) <= THETA_THRESHOLD) &&
 						(magn >= DELTA_THRESHOLD)) {
-					pixelWriter.setColor(x,y,Color.RED);
+					pixelWriter.setColor(x,y,Color.WHITE);
 				} else {
 					pixelWriter.setColor(x,y, Color.BLACK);
 				}
