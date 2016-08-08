@@ -16,6 +16,7 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 
 /**
  * Created by Sam Roberts on 8/5/2016.
@@ -47,17 +48,32 @@ public class FileSelectorButton extends Button {
 		public void handle(Event event) {
 			FileChooser fileChooser = new FileChooser();
 			fileChooser.setTitle("Select a picture");
+			FileChooser.ExtensionFilter extFilterALL = new FileChooser.ExtensionFilter("All Images", "*.*");
 			FileChooser.ExtensionFilter extFilterJPG = new FileChooser.ExtensionFilter("JPG files (*.jpg)", "*.JPG");
 			FileChooser.ExtensionFilter extFilterPNG = new FileChooser.ExtensionFilter("PNG files (*.png)", "*.PNG");
-			fileChooser.getExtensionFilters().addAll(extFilterJPG, extFilterPNG);
+			//not supported
+			//FileChooser.ExtensionFilter extFilterTIF = new FileChooser.ExtensionFilter("TIF files (*.tif)", "*.tif");
+			FileChooser.ExtensionFilter extFilterGIF = new FileChooser.ExtensionFilter("GIF files (*.gif)", "*.gif");
+			FileChooser.ExtensionFilter extFilterBMP = new FileChooser.ExtensionFilter("BMP files (*.bmp)", "*.bmp");
+			fileChooser.getExtensionFilters().addAll(extFilterALL,
+					extFilterJPG,
+					extFilterPNG,
+					//extFilterTIF,
+					extFilterGIF,
+					extFilterBMP);
 			this.file = fileChooser.showOpenDialog(new Stage());
 			try {
 				if (file != null) {
 					textField.setText(file.getCanonicalPath());
 					BufferedImage bufferedImage = ImageIO.read(file);
-					Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-					imageViewer.setImage(image);
-					application.setFile(file);
+					if(bufferedImage != null) {
+						Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+						imageViewer.setImage(image);
+						application.setFile(file);
+					} else {
+						textField.setText("Unsupported File type :(");
+						throw new IOException("Unsupported File type");
+					}
 				}
 			} catch (IOException e) {
 				System.out.println(e.getMessage());
