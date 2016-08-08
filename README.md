@@ -17,7 +17,11 @@ To run without cloning the project:
 
 2. Double click on the EdgeDetection-0.0.1.jar file
 
-Build the project using maven https://maven.apache.org/download.cgi
+If cloning the project:
+
+1.Build the project using maven https://maven.apache.org/download.cgi
+
+2.
 
   `mvn clean install`
   
@@ -25,7 +29,7 @@ Build the project using maven https://maven.apache.org/download.cgi
   
 This will create a runnable jar in the /target folder.
 
-Double click on the jar file to run
+3.Double click on the jar file to run
 
 
 
