@@ -5,16 +5,8 @@ import gui.components.imageViewer.ImageViewer;
 import gui.components.textField.ReadOnlyTextField;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
-import javafx.stage.Stage;
-
-import java.io.File;
 
 /**
  * Created by Sam Roberts on 8/5/2016.

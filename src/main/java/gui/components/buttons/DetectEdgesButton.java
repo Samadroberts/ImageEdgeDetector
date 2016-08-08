@@ -5,7 +5,6 @@ import gui.application;
 import gui.components.buttons.ButtonConstants.ButtonProperties;
 import gui.components.imageViewer.ImageViewer;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

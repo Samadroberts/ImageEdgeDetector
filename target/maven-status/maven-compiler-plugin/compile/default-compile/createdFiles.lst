@@ -1,0 +1,10 @@
+gui\components\imageViewer\ImageViewer.class
+gui\components\textField\ReadOnlyTextField.class
+gui\components\buttons\ButtonConstants\ButtonProperties.class
+gui\components\fileSelection\FileSelectionView.class
+gaussianfilter\ImageUtils.class
+gui\components\MainPanel.class
+gui\components\buttons\FileSelectorButton$FileEventHandler.class
+gui\components\buttons\FileSelectorButton.class
+gui\application.class
+gui\components\buttons\DetectEdgesButton.class
