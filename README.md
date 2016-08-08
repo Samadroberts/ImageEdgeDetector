@@ -11,6 +11,10 @@ Vladimirs website: http://vkedco.blogspot.ca/
 
 Linkdin: https://www.linkedin.com/in/vladimir-kulyukin-1502a223
 
+To run without cloning the project:
+1. Download EdgeDetection-0.0.1.jar. 
+2. Double click on the EdgeDetection-0.0.1.jar file
+
 Build the project using maven https://maven.apache.org/download.cgi
 
   `mvn clean install`
